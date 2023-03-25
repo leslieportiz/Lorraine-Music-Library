@@ -9,7 +9,7 @@ export default function AlbumView() {
 
     useEffect(() => {
         async function fetchData() {
-            const res = await fetch(`http://localhost:4000/album/${id}`)
+            const res = await fetch(`http://localhost:4000/song/${id}`)
             const resData = await res.json()
             if (resData.results.length > 0) {
                 setAlbumData(resData.results[0])
